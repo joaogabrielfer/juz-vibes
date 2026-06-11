@@ -1,6 +1,12 @@
-[package]
-name = "juz-vibes"
+[workspace]
+members = [
+    "crates/pyx-bytecode",
+    "crates/pyx-cli",
+    "crates/pyx-compiler",
+]
+resolver = "3"
+
+[workspace.package]
 version = "0.1.0"
 edition = "2024"
-
-[dependencies]
+license = "MIT"
