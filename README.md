@@ -105,6 +105,8 @@ The documentation site lives in `site/` and renders the latest version from `sit
 The site source is checked in; generated Starlight content, build output, and
 dependencies are not.
 
+Website documentation [here](https://joaogabrielfer.github.io/juz-vibes/)
+
 Useful documentation entry points:
 
 - Source index: [`site/docs/v0.12/index.md`](site/docs/v0.12/index.md)
