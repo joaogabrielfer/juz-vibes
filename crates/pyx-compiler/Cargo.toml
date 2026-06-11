@@ -1,0 +1,8 @@
+[package]
+name = "pyx-compiler"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+pyx-bytecode = { path = "../pyx-bytecode" }

@@ -1,0 +1,12 @@
+[package]
+name = "pyx-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "pyx"
+path = "src/main.rs"
+
+[dependencies]
+pyx-compiler = { path = "../pyx-compiler" }
