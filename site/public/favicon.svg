@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Juz docs">
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f1720" />
+      <stop offset="100%" stop-color="#122b2f" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#efb163" />
+      <stop offset="100%" stop-color="#29b8be" />
+    </linearGradient>
+  </defs>
+  <rect width="96" height="96" rx="20" fill="url(#bg)" />
+  <path d="M24 23h48v10H35v14h29v10H35v16h37v10H24z" fill="url(#accent)" />
+  <path d="M60 23h12v33c0 12-8 20-21 20h-8V66h7c7 0 10-3 10-10z" fill="#f7efe3" />
+</svg>

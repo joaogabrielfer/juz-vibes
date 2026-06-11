@@ -1,0 +1,354 @@
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-mono/400.css';
+@import '@fontsource/geist-mono/500.css';
+@import '@fontsource/newsreader/600.css';
+
+:root {
+	--sl-font: 'Geist Sans';
+	--sl-font-mono: 'Geist Mono';
+	--sl-content-width: 51rem;
+	--sl-sidebar-width: 19.75rem;
+
+	--sl-color-accent-low: hsl(178, 64%, 15%);
+	--sl-color-accent: hsl(178, 67%, 42%);
+	--sl-color-accent-high: hsl(178, 76%, 76%);
+
+	--sl-color-orange-low: hsl(31, 46%, 19%);
+	--sl-color-orange: hsl(35, 78%, 61%);
+	--sl-color-orange-high: hsl(36, 88%, 82%);
+	--sl-color-green-low: hsl(151, 38%, 18%);
+	--sl-color-green: hsl(151, 52%, 45%);
+	--sl-color-green-high: hsl(151, 67%, 77%);
+	--sl-color-blue-low: hsl(205, 48%, 18%);
+	--sl-color-blue: hsl(205, 70%, 55%);
+	--sl-color-blue-high: hsl(205, 78%, 82%);
+	--sl-color-purple-low: hsl(194, 45%, 17%);
+	--sl-color-purple: hsl(178, 67%, 42%);
+	--sl-color-purple-high: hsl(178, 76%, 76%);
+	--sl-color-red-low: hsl(7, 39%, 20%);
+	--sl-color-red: hsl(7, 63%, 56%);
+	--sl-color-red-high: hsl(7, 72%, 81%);
+}
+
+:root,
+:root[data-theme='dark'] {
+	--sl-color-gray-1: hsl(43, 18%, 94%);
+	--sl-color-gray-2: hsl(42, 12%, 82%);
+	--sl-color-gray-3: hsl(39, 8%, 63%);
+	--sl-color-gray-4: hsl(206, 9%, 43%);
+	--sl-color-gray-5: hsl(207, 14%, 25%);
+	--sl-color-gray-6: hsl(211, 20%, 15%);
+	--sl-color-black: hsl(215, 25%, 9%);
+
+	--sl-color-text: hsl(43, 22%, 88%);
+	--sl-color-text-accent: var(--sl-color-accent-high);
+	--sl-color-bg: hsl(215, 25%, 9%);
+	--sl-color-bg-nav: hsla(214, 26%, 11%, 0.92);
+	--sl-color-bg-sidebar: hsl(212, 24%, 12%);
+	--sl-color-bg-inline-code: hsl(210, 19%, 19%);
+	--sl-color-hairline-light: hsla(42, 30%, 88%, 0.14);
+	--sl-color-hairline: hsla(42, 30%, 88%, 0.08);
+	--sl-color-hairline-shade: hsla(0, 0%, 0%, 0.45);
+}
+
+:root[data-theme='light'] {
+	--sl-color-white: hsl(216, 20%, 13%);
+	--sl-color-gray-1: hsl(216, 27%, 18%);
+	--sl-color-gray-2: hsl(215, 19%, 25%);
+	--sl-color-gray-3: hsl(214, 13%, 39%);
+	--sl-color-gray-4: hsl(210, 11%, 55%);
+	--sl-color-gray-5: hsl(41, 24%, 78%);
+	--sl-color-gray-6: hsl(43, 34%, 91%);
+	--sl-color-gray-7: hsl(45, 44%, 96%);
+	--sl-color-black: hsl(48, 43%, 98%);
+
+	--sl-color-accent-low: hsl(178, 59%, 89%);
+	--sl-color-accent: hsl(181, 65%, 33%);
+	--sl-color-accent-high: hsl(193, 72%, 20%);
+
+	--sl-color-text: hsl(215, 23%, 19%);
+	--sl-color-text-accent: var(--sl-color-accent-high);
+	--sl-color-text-invert: hsl(48, 43%, 98%);
+	--sl-color-bg: hsl(48, 43%, 98%);
+	--sl-color-bg-nav: hsla(48, 43%, 98%, 0.94);
+	--sl-color-bg-sidebar: hsl(42, 34%, 95%);
+	--sl-color-bg-inline-code: hsl(42, 25%, 89%);
+	--sl-color-bg-accent: var(--sl-color-accent);
+	--sl-color-hairline-light: hsl(40, 22%, 83%);
+	--sl-color-hairline: hsl(40, 18%, 87%);
+	--sl-color-hairline-shade: hsl(40, 18%, 90%);
+}
+
+body {
+	background-color: var(--sl-color-bg);
+	background-image:
+		linear-gradient(180deg, hsla(178, 67%, 42%, 0.12), transparent 18rem),
+		linear-gradient(90deg, hsla(41, 45%, 72%, 0.09) 1px, transparent 1px),
+		linear-gradient(hsla(41, 45%, 72%, 0.07) 1px, transparent 1px),
+		linear-gradient(135deg, hsla(178, 67%, 42%, 0.05) 1px, transparent 1px);
+	background-size: auto, 32px 32px, 32px 32px, 44px 44px;
+}
+
+:root[data-theme='light'] body {
+	background-image:
+		linear-gradient(180deg, hsla(178, 60%, 40%, 0.08), transparent 16rem),
+		linear-gradient(90deg, hsla(40, 18%, 74%, 0.34) 1px, transparent 1px),
+		linear-gradient(hsla(40, 18%, 74%, 0.3) 1px, transparent 1px),
+		linear-gradient(135deg, hsla(178, 60%, 40%, 0.06) 1px, transparent 1px);
+	background-size: auto, 28px 28px, 28px 28px, 42px 42px;
+}
+
+:where(h1, h2, h3) {
+	font-family: 'Newsreader', Georgia, serif;
+	font-weight: 600;
+}
+
+:where(h1) {
+	font-size: 3.2rem;
+	line-height: 1.02;
+}
+
+:where(h2) {
+	letter-spacing: 0;
+}
+
+:where(code, pre, kbd, .expressive-code, .expressive-code *) {
+	font-variant-ligatures: none;
+	font-feature-settings:
+		'liga' 0,
+		'calt' 0;
+}
+
+:where(.site-title) {
+	font-weight: 600;
+}
+
+:where(header.header) {
+	backdrop-filter: blur(18px);
+	border-bottom-color: var(--sl-color-hairline-light);
+}
+
+:where(.sidebar-content) {
+	background:
+		linear-gradient(180deg, hsla(178, 67%, 42%, 0.08), transparent 14rem),
+		linear-gradient(135deg, hsla(41, 45%, 72%, 0.045) 1px, transparent 1px);
+	background-size: auto, 38px 38px;
+}
+
+:where(.sidebar-content a) {
+	border-radius: 0.35rem;
+}
+
+:where(.content-panel) {
+	border-top: 1px solid var(--sl-color-hairline-light);
+}
+
+:where(.content-panel h2) {
+	padding-top: 0.35rem;
+	border-top: 1px solid var(--sl-color-hairline);
+}
+
+:where(.content-panel blockquote) {
+	border-inline-start-color: var(--sl-color-accent);
+	background: linear-gradient(90deg, hsla(178, 67%, 42%, 0.12), transparent);
+}
+
+:where(.content-panel a) {
+	text-underline-offset: 0.18em;
+}
+
+:where(.content-panel pre) {
+	border: 1px solid var(--sl-color-hairline-light);
+	box-shadow: 0 18px 50px hsla(0, 0%, 0%, 0.18);
+}
+
+:where(.content-panel code:not(pre code)) {
+	border: 1px solid var(--sl-color-hairline-light);
+	padding: 0.1rem 0.35rem;
+	border-radius: 0.3rem;
+	white-space: nowrap;
+}
+
+:where(.content-panel table) {
+	display: block;
+	box-sizing: border-box;
+	width: fit-content;
+	max-width: 100%;
+	border: 1px solid var(--sl-color-hairline-light);
+	border-radius: 0.45rem;
+	border-spacing: 0;
+	overflow-x: auto;
+	font-size: 0.92rem;
+	background: color-mix(in srgb, var(--sl-color-bg) 88%, var(--sl-color-accent) 12%);
+}
+
+:where(.content-panel th) {
+	background: hsla(178, 67%, 42%, 0.12);
+	color: var(--sl-color-white);
+	font-weight: 600;
+}
+
+:root[data-theme='light'] :where(.content-panel th) {
+	background: hsla(178, 60%, 40%, 0.1);
+}
+
+:where(.content-panel th, .content-panel td) {
+	border-color: var(--sl-color-hairline-light);
+	padding: 0.65rem 0.8rem;
+	vertical-align: top;
+	min-width: 9rem;
+	line-height: 1.45;
+}
+
+:where(.content-panel table code:not(pre code)) {
+	border: 0;
+	background: transparent;
+	padding: 0;
+	color: inherit;
+}
+
+:where(.content-panel th:first-child, .content-panel td:first-child) {
+	min-width: 7rem;
+	font-weight: 600;
+	color: var(--sl-color-white);
+}
+
+:where(.content-panel tr:nth-child(even) td) {
+	background: hsla(178, 67%, 42%, 0.045);
+}
+
+:where(.spec-index) {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid var(--sl-color-hairline-light);
+}
+
+:where(.spec-index li) {
+	margin: 0;
+	border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+:where(.spec-index a) {
+	display: grid;
+	grid-template-columns: 3.5rem minmax(0, 1fr);
+	gap: 1rem;
+	padding: 1rem 0;
+	color: var(--sl-color-text);
+	text-decoration: none;
+	border-radius: 0.45rem;
+	transition:
+		background-color 150ms ease,
+		color 150ms ease,
+		transform 150ms ease,
+		border-color 150ms ease;
+}
+
+:where(.spec-index a:hover) {
+	background: hsla(178, 67%, 42%, 0.08);
+	color: var(--sl-color-white);
+	transform: translateX(0.25rem);
+}
+
+:where(.spec-index-number) {
+	align-self: start;
+	font-family: var(--__sl-font-mono);
+	font-size: 0.82rem;
+	color: var(--sl-color-accent-high);
+	transition: color 150ms ease;
+}
+
+:root[data-theme='light'] :where(.spec-index-number) {
+	color: var(--sl-color-accent-high);
+}
+
+:where(.spec-index a:hover .spec-index-number) {
+	color: var(--sl-color-orange-high);
+}
+
+:where(.spec-index-copy) {
+	display: grid;
+	gap: 0.3rem;
+	min-width: 0;
+}
+
+:where(.spec-index-copy strong) {
+	font-size: 1.05rem;
+	font-weight: 600;
+	line-height: 1.25;
+	color: var(--sl-color-white);
+}
+
+:where(.spec-index-copy span) {
+	max-width: 64ch;
+	color: var(--sl-color-gray-3);
+	line-height: 1.55;
+}
+
+:where(.spec-sections) {
+	display: grid;
+	gap: 3rem;
+	margin-top: 2.25rem;
+}
+
+:where(.spec-section) {
+	display: grid;
+	gap: 1.1rem;
+}
+
+:where(.spec-section-heading) {
+	display: grid;
+	gap: 0.45rem;
+	max-width: 54rem;
+}
+
+:where(.spec-section-heading h2) {
+	margin: 0;
+	padding-top: 0;
+	border-top: 0;
+}
+
+:where(.spec-section-heading p) {
+	margin: 0;
+	color: var(--sl-color-gray-3);
+	line-height: 1.65;
+}
+
+:where(.sl-link-card) {
+	border-radius: 0.45rem;
+}
+
+@media (min-width: 64rem) {
+	:root:not([data-has-sidebar]) {
+		--sl-content-width: 76rem;
+	}
+
+	:where(.spec-index) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 2.25rem;
+	}
+
+	:where(.spec-index li:nth-child(2)) {
+		border-top: 1px solid var(--sl-color-hairline-light);
+	}
+}
+
+@media (max-width: 50rem) {
+	:root {
+		--sl-content-width: 100%;
+	}
+
+	:where(h1) {
+		font-size: 2.5rem;
+	}
+
+	:where(.spec-index a) {
+		grid-template-columns: 2.6rem minmax(0, 1fr);
+		gap: 0.8rem;
+	}
+}

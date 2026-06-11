@@ -1,0 +1,29 @@
+{
+  "name": "juz-vibes-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "prepare-docs": "node ./scripts/prepare-docs.mjs",
+    "predev": "npm run prepare-docs",
+    "dev": "astro dev",
+    "start": "npm run dev",
+    "prebuild": "npm run prepare-docs",
+    "build": "astro build",
+    "prepreview": "npm run prepare-docs",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaogabrielfer/juz-vibes.git",
+    "directory": "site"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.39.2",
+    "@fontsource/geist-mono": "^5.2.8",
+    "@fontsource/geist-sans": "^5.2.5",
+    "@fontsource/newsreader": "^5.2.10",
+    "astro": "^6.3.1",
+    "sharp": "^0.34.5"
+  }
+}

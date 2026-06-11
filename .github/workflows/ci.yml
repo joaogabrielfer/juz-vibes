@@ -1,8 +1,22 @@
-name: CI
+name: Rust CI
 
 on:
   push:
+    paths:
+      - ".github/workflows/ci.yml"
+      - "Cargo.lock"
+      - "Cargo.toml"
+      - "crates/**"
+      - "tests/**"
+      - "bytecode-spec.md"
   pull_request:
+    paths:
+      - ".github/workflows/ci.yml"
+      - "Cargo.lock"
+      - "Cargo.toml"
+      - "crates/**"
+      - "tests/**"
+      - "bytecode-spec.md"
 
 jobs:
   rust:
